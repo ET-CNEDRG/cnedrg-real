@@ -13,6 +13,19 @@ h1 {
   color: transparent;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   font-size: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 picture {
+  display: block;
+}
+
+h1 img {
+  max-width: 300px;
+  height: auto;
 }
 
 nav {
