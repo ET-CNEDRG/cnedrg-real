@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNEDRG</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+  <header style="text-align: relative;position: relative;">
+    <hr style="position: absolute; top: 80px; left: 0px; width: 100%; border: none; border-top: 6px solid #2a788e; z-index: 0;">
+    <hr style="position: absolute; top: 100px; left: 0px; width: 100%; border: none; border-top: 6px solid #2a788e; z-index: 0;">
+
+
+    <h1 style="position: relative; z-index: 1;">
+      <img src="attached_assets/Untitled Project (2).jpg" alt="CNEDRG Logo" width="200" height="auto">
+    </h1>
+
+    <h3>
+        Central New England Dental Research Group
+    </h2>
+
+
+    <nav id="nav-links" style="position: absolute; z-index: 1;">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="upcoming.html">Upcoming Speakers</a>
+      <a href="board.html">Board Members</a>
+      <a href="apply.html">Membership Application</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+      <p id="p4">CNEDRG Membership Application</p>
+
+      <form name="membership" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="membership">
+
+        <label>Name of Applicant:</label><br>
+        <input type="text" name="applicant_name" required><br><br>
+
+        <label>Address:</label><br>
+        <input type="text" name="address" required><br><br>
+
+        <label>City:</label><br>
+        <input type="text" name="city" required><br><br>
+
+        <label>State:</label><br>
+        <input type="text" name="state" required><br><br>
+
+        <label>Office Address:</label><br>
+        <input type="text" name="office_address"><br><br>
+
+        
+
+        <label>Email Address:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>College Education (Year and Degree):</label><br>
+        <input type="text" name="college_education"><br><br>
+
+        <label>Dental School Education (Year and Degree):</label><br>
+        <input type="text" name="dental_education"><br><br>
+
+        <label>Graduate or Post-Graduate Training:</label><br>
+        <input type="text" name="grad_training"><br><br>
+
+        <label>Continuing Education Courses Taken:</label><br>
+        <textarea name="ce_courses" rows="3"></textarea><br><br>
+
+        <label>Hospital Service (Dates):</label><br>
+        <textarea name="hospital_service" rows="2"></textarea><br><br>
+
+        <label>Type of Dental Practice:</label><br>
+        <input type="text" name="dental_practice"><br><br>
+
+        <label>Active Membership in Dental Societies:</label><br>
+        <textarea name="dental_societies" rows="2"></textarea><br><br>
+
+        <label>Service with Armed Forces (Dates):</label><br>
+        <input type="text" name="military_service"><br><br>
+
+        <label>Community Activities:</label><br>
+        <textarea name="community_activities" rows="2"></textarea><br><br>
+
+        <label>Endorsed by:</label><br>
+        <input type="text" name="endorser_1" placeholder="1)"><br><br>
+        <input type="text" name="endorser_2" placeholder="2)"><br><br>
+
+        <label>Signature:</label><br>
+        <input type="text" name="signature"><br><br>
+
+
+        <button type="submit" id="Submit_Form">Submit Application</button>
+      </form>
+
+    
+
+
+
+  <button id="menu-toggle" class="hamburger">&#9776;</button>
+
+
+
+  <main id="content"></main>
+  <script src="script.js" style="text-wrap: wrap;"></script>
+</body>
+
+</html>
