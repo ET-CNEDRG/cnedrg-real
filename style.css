@@ -1,9 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
 }
-
 
 
 
@@ -44,7 +44,11 @@ h4 {
   margin-bottom: 20px;
 }
 
-  
+h1 {
+  text-align: center;
+  margin: 0.5em auto;
+  width: 100%;
+}
 
 
 h1 {
@@ -320,4 +324,5 @@ nav a:hover {
 p {
   text-indent: 2em;
   text-align: left;
+  margin: 10px;
 }
