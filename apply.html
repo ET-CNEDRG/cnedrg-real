@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CNEDRG</title>
@@ -70,14 +71,12 @@
         <label>Continuing Education Courses Taken:</label><br>
         <textarea name="ce_courses" rows="3"></textarea><br><br>
 
-        <label>Hospital Service (Dates):</label><br>
-        <textarea name="hospital_service" rows="2"></textarea><br><br>
 
         <label>Type of Dental Practice:</label><br>
         <input type="text" name="dental_practice"><br><br>
 
         <label>Active Membership in Dental Societies:</label><br>
-        <textarea name="dental_societies" rows="2"></textarea><br><br>
+        <textarea name="dental_societies" rows="3"></textarea><br><br>
 
         <label>Service with Armed Forces (Dates):</label><br>
         <input type="text" name="military_service"><br><br>
@@ -89,8 +88,12 @@
         <input type="text" name="endorser_1" placeholder="1)"><br><br>
         <input type="text" name="endorser_2" placeholder="2)"><br><br>
 
-        <label>Signature:</label><br>
-        <input type="text" name="signature"><br><br>
+        <label for="signature">Signature:</label><br>
+        <canvas id="signature-pad" width="400" height="200" style="border:1px solid #ccc; border-radius: 8px;"></canvas>
+        <br>
+        <button id="clear_sig" type="button" onclick="clearSignature()">Clear Signature</button>
+        <input type="hidden" name="signature" id="signature-data">
+
 
 
         <button type="submit" id="Submit_Form">Submit Application</button>
@@ -106,6 +109,57 @@
 
   <main id="content"></main>
   <script src="script.js" style="text-wrap: wrap;"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const canvas = document.getElementById('signature-pad');
+    const signaturePad = new SignaturePad(canvas);
+
+    function clearSignature() {
+      signaturePad.clear();
+    }
+
+    // When submitting the form, add signature data to hidden field
+    document.querySelector('form').addEventListener('submit', function (e) {
+      if (!signaturePad.isEmpty()) {
+        document.getElementById('signature-data').value = signaturePad.toDataURL();
+      }
+    });
+  </script>
+
 </body>
 
 </html>
