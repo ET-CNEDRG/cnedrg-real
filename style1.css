@@ -26,22 +26,29 @@
   font-size: 30px;
   margin-bottom: 20px;
 }
-#Dues #map {
-  display: flex;
-}
+@media (min-wdith: 769px) {
+  #Dues #map {
+    display: flex;
+  }
 
-#Dues iframe {
-  flex: 1;
+  #Dues iframe {
+    flex: 1;
+  }
+
+  #Dues sub {
+    flex:1;
+    margin-top: 100px;
+  }
 }
 
 #Dues sub {
-  flex:1;
-  margin: 20px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
   font-size: 30px;
   color: #2a788e;
-  text-align: center;
-  margin-top: 100px;
 }
+
 
 #Dues h1 {
   text-align: left;
@@ -119,8 +126,17 @@ body {
     margin: 10px;
     font-size: clamp(38px, 4.8vw, 48px)
   }
+  h5 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+    font-size: clamp(38px, 4.8vw, 48px)
+  }
 }
-  
+
+
+
 
   
 #About_Garine p { 
@@ -448,3 +464,4 @@ p {
   text-indent: 2em;
   text-align: left;
 }
+
