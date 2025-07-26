@@ -1,15 +1,6 @@
 const content = document.getElementById('content');
 
 
-const heading = document.createElement('h2');
-heading.textContent = 'Welcome to CNEDRG';
-
-const intro = document.createElement('p');
-intro.textContent = 'paragraph 1';
-
-const mission = document.createElement('p');
-mission.textContent = 'paragraph 2';
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-links')
@@ -28,8 +19,29 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleButton.classList.remove('rotate');
     }
   });
-  
+  const dropdown = nav.querySelector('.dropdown');
+  const menuToggle = document.getElementById('menu-toggle');
+  const dropBtn = nav.querySelector('.dropbtn');
+
+  // Toggle dropdown submenu on mobile when clicking 'Upcoming Meetings'
+  dropBtn.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // prevent following the link
+      dropdown.classList.toggle('show-dropdown');
+    }
+  });
+
+  // Optional: Close menu if clicking outside on mobile
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove('show');
+      menuToggle.classList.remove('rotate');
+      dropdown.classList.remove('show-dropdown');
+    }
+  });
+
 });
+
                               
 content.appendChild(heading);
 content.appendChild(intro);
