@@ -71,10 +71,12 @@
   color: #2a788e;
 }
 
+
 #About_Course #p8 {
   display: block;
   text-align: center;
   margin: 0 auto;
+  text-indent: 0;
 }
 
 
