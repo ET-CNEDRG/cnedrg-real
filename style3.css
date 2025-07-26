@@ -31,13 +31,13 @@ body {
 }
 @media (min-width: 1370px) {
   #p4 {
-    margin-top: 125px;
+    margin-top: 135px;
   }
 }
 @media (min-width: 769px) {
   @media (max-width: 1369px) {
     #p4 {
-    margin-top: 200px;
+    margin-top: 210px;
     }
   }
 }
@@ -350,6 +350,7 @@ p {
 form {
   font-size: 22px;
   margin: 20px;
+  color: #2a788e;
 }
 form #Submit_Form {
   padding: 10px;

@@ -36,7 +36,7 @@
   </header>
       <p id="p4">CNEDRG Membership Application</p>
 
-      <form name="membership" method="POST" data-netlify="true">
+      <form name="membership" method="POST" netlify>
         <input type="hidden" name="form-name" value="membership">
 
         <label>Name of Applicant:</label><br>
@@ -89,7 +89,7 @@
         <input type="text" name="endorser_2" placeholder="2)"><br><br>
 
         <label for="signature">Signature:</label><br>
-        <canvas id="signature-pad" width="400" height="200" style="border:1px solid #ccc; border-radius: 8px;"></canvas>
+        <canvas id="signature-pad" width="300" height="100" style="border:1px solid #ccc; border-radius: 8px;"></canvas>
         <br>
         <button id="clear_sig" type="button" onclick="clearSignature()">Clear Signature</button>
         <input type="hidden" name="signature" id="signature-data">
@@ -152,7 +152,7 @@
       signaturePad.clear();
     }
 
-    // When submitting the form, add signature data to hidden field
+    
     document.querySelector('form').addEventListener('submit', function (e) {
       if (!signaturePad.isEmpty()) {
         document.getElementById('signature-data').value = signaturePad.toDataURL();
