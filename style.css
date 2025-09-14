@@ -333,17 +333,19 @@ p {
   position: relative;
   width: 80%;
   max-width: 800px;
-  margin: 40px auto;
+  margin: 20px auto 40px auto; /* 20px top margin to position below nav */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 0 20px; /* Adjust padding for buttons */
+  background-color: black; /* Black background for letterboxing */
 }
 
 .carousel-slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 400px; /* Adjust height as needed */
+  background-color: black; /* Black background */
 }
 
 .carousel-slide {
@@ -354,12 +356,13 @@ p {
   align-items: center;
   color: white;
   font-size: 2em;
+  background-color: black; /* Black background for each slide */
 }
 
 .carousel-slide img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Prevent stretching, maintain aspect ratio */
   border-radius: 8px;
 }
 
@@ -413,7 +416,7 @@ p {
 @media (max-width: 768px) {
   .carousel-container {
     max-width: 95%;
-    margin: 20px auto;
+    margin: 20px auto; /* Maintain 20px spacing on mobile */
     padding: 0 5px;
   }
 
@@ -438,7 +441,7 @@ p {
 @media (max-width: 480px) {
   .carousel-container {
     max-width: 100%;
-    margin: 15px auto;
+    margin: 20px auto; /* Maintain 20px spacing on small mobile */
     padding: 0;
   }
 
