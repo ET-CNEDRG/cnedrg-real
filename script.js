@@ -42,7 +42,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-                              
+
 content.appendChild(heading);
 content.appendChild(intro);
 content.appendChild(mission);
+
+// Carousel functionality - only run if carousel exists
+let currentSlideIndex = 0;
+let slides = [];
+let dots = [];
+let autoSlideInterval;
+
+function showSlide(index) {
+  // Remove active class from all slides and dots
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // Add active class to current slide and dot
+  if (slides[index]) {
+    slides[index].classList.add('active');
+  }
+  if (dots[index]) {
+    dots[index].classList.add('active');
+  }
+}
+
+function changeSlide(direction) {
+  currentSlideIndex += direction;
+
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
+  }
+
+  showSlide(currentSlideIndex);
+  resetAutoSlide();
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index - 1;
+  showSlide(currentSlideIndex);
+  resetAutoSlide();
+}
+
+function nextSlide() {
+  changeSlide(1);
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 10000); // 10 seconds
+}
+
+// Initialize carousel when page loads - only if carousel elements exist
+document.addEventListener('DOMContentLoaded', function() {
+  slides = document.querySelectorAll('.carousel-slide');
+  dots = document.querySelectorAll('.dot');
+
+  if (slides.length > 0) {
+    showSlide(0);
+    startAutoSlide();
+  }
+});

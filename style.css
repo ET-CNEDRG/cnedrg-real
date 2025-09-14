@@ -17,7 +17,7 @@ body {
 #p4 {
   text-wrap: wrap;
   padding-top: 10px;
-  
+
 }
 @media (min-width: 1370px) {
   #p4 {
@@ -325,4 +325,139 @@ p {
   text-indent: 2em;
   text-align: left;
   margin: 10px;
+}
+
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 0 20px; /* Adjust padding for buttons */
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 400px; /* Adjust height as needed */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.carousel-dots {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 0 5px;
+  }
+
+  .carousel-slides {
+    height: 250px;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 0;
+  }
+
+  .carousel-slides {
+    height: 180px;
+  }
+
+  .carousel-btn {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .carousel-dots {
+    padding: 10px 0;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
 }
