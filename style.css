@@ -331,6 +331,7 @@ p {
 
 
 .slideshow-container {
+  max-height: 500px;
   max-width: 1000px;
   position: relative;
   margin: auto;
